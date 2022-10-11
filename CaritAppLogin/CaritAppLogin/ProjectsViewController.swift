@@ -9,10 +9,17 @@ import UIKit
 
 class ProjectsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let images = ["alimentos", "ropa", "medicamentos", "emergencia"]
-    let titles = ["Banco de alimentos", "Banco de Ropa", "Banco de Medicamentos", "Campañas de Emergencia"]
-    let location = ["📍San Pedro Garza Garcia, N.L.","📍San Pedro Garza Garcia, N.L.", "📍San Pedro Garza Garcia, N.L.", "📍San Pedro Garza Garcia, N.L."]
-
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    
+    @IBAction func proyectoSeleccionado(_ sender: Any) {
+    }
+    
+    
+    
+    let images = ["alimentos", "ropa", "medicamentos", "centros", "vestido", "ducha", "emergencia", "peregrino"]
+    let titles = ["Banco de alimentos 🍎", "Banco de Ropa 👕", "Banco de Medicamentos 💊", "Reestructuración de Centros 👷🏻‍♂️", "Dignamente Vestido 👔", "Ducha-T 🚿", "Campañas de Emergencia 🏥", "Posada del Peregrino 🛏"]
+    let location = ["📍San Pedro Garza Garcia, N.L.","📍San Pedro Garza Garcia, N.L.", "📍San Pedro Garza Garcia, N.L.", "📍San Pedro Garza Garcia, N.L.", "📍San Pedro Garza Garcia, N.L.","📍San Pedro Garza Garcia, N.L.", "📍San Pedro Garza Garcia, N.L.", "📍San Pedro Garza Garcia, N.L."]
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
@@ -27,14 +34,27 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detailProject" {
+            if let destino = segue.destination as? DetailViewController, let index = myCollectionView.indexPathsForSelectedItems?.first {
+                destino.datoMostrar = titles[index.row]
+            }
+        }
+        
+        
+    }
 }
-
+        
+        
+    
 
 class Post: UICollectionViewCell {
     
