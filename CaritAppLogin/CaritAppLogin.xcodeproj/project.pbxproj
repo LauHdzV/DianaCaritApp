@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54BBE6B528F5C06E007BCB44 /* AprobarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBE6B428F5C06E007BCB44 /* AprobarViewController.swift */; };
 		F75313D528F536C100B7998A /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75313D428F536C100B7998A /* FirstScreenViewController.swift */; };
 		F77DA34328DCF6F3009766CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DA34228DCF6F3009766CD /* DetailViewController.swift */; };
 		F796EE2A28C99C8B0034CE58 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54BBE6B128F5C044007BCB44 /* Aprobar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aprobar.h; sourceTree = "<group>"; };
+		54BBE6B428F5C06E007BCB44 /* AprobarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprobarViewController.swift; sourceTree = "<group>"; };
 		F75313D428F536C100B7998A /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		F77DA34228DCF6F3009766CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				FB28EAD328E656870022A671 /* Model.swift */,
 				FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */,
 				FB63056528C7929E00FBAA1B /* Main.storyboard */,
+				54BBE6B428F5C06E007BCB44 /* AprobarViewController.swift */,
+				54BBE6B128F5C044007BCB44 /* Aprobar.h */,
 				F75313D428F536C100B7998A /* FirstScreenViewController.swift */,
 				F7E9E8D128EFE867002B6391 /* RegistrarViewController.swift */,
 				F7E9E8CF28EFE645002B6391 /* ProjectListViewController.swift */,
@@ -173,6 +178,7 @@
 				TargetAttributes = {
 					FB63055B28C7929E00FBAA1B = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1400;
 					};
 				};
 			};
@@ -226,6 +232,7 @@
 				F7E9E8D028EFE645002B6391 /* ProjectListViewController.swift in Sources */,
 				FB63056028C7929E00FBAA1B /* AppDelegate.swift in Sources */,
 				F77DA34328DCF6F3009766CD /* DetailViewController.swift in Sources */,
+				54BBE6B528F5C06E007BCB44 /* AprobarViewController.swift in Sources */,
 				FBB3356528DA12260032ED9C /* ProfileViewController.swift in Sources */,
 				FB28EAD428E656870022A671 /* Model.swift in Sources */,
 				FB63056228C7929E00FBAA1B /* SceneDelegate.swift in Sources */,
@@ -381,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DYX3J76K3D;
@@ -399,6 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tec.mx.CaritAppLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -409,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DYX3J76K3D;
