@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F75313D528F536C100B7998A /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75313D428F536C100B7998A /* FirstScreenViewController.swift */; };
 		F77DA34328DCF6F3009766CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DA34228DCF6F3009766CD /* DetailViewController.swift */; };
 		F796EE2A28C99C8B0034CE58 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */; };
 		F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F75313D428F536C100B7998A /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		F77DA34228DCF6F3009766CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FB28EAD328E656870022A671 /* Model.swift */,
 				FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */,
 				FB63056528C7929E00FBAA1B /* Main.storyboard */,
+				F75313D428F536C100B7998A /* FirstScreenViewController.swift */,
 				F7E9E8D128EFE867002B6391 /* RegistrarViewController.swift */,
 				F7E9E8CF28EFE645002B6391 /* ProjectListViewController.swift */,
 				FB28EAD528E65DD30022A671 /* AdminProjectsViewController.swift */,
@@ -219,6 +222,7 @@
 				F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */,
 				FB6B8BD428C8DFBE003C38F5 /* DashboardViewController.swift in Sources */,
 				FB28EAD628E65DD30022A671 /* AdminProjectsViewController.swift in Sources */,
+				F75313D528F536C100B7998A /* FirstScreenViewController.swift in Sources */,
 				F7E9E8D028EFE645002B6391 /* ProjectListViewController.swift in Sources */,
 				FB63056028C7929E00FBAA1B /* AppDelegate.swift in Sources */,
 				F77DA34328DCF6F3009766CD /* DetailViewController.swift in Sources */,

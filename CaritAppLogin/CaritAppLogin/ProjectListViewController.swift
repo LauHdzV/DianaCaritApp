@@ -11,7 +11,7 @@ class ProjectListViewController: UIViewController, UICollectionViewDelegate, UIC
     
     let images = ["alimentos", "ropa", "medicamentos", "emergencia"]
     let titles = ["Banco de alimentos", "Banco de Ropa", "Banco de Medicamentos", "Campañas de Emergencia"]
-    let location = ["LU MA MI 9:00 am a 10:00 am","LU JU VI 10:00 am a 11:00 am", "MI JU VI 11:00 am a 12:00 pm", "MA MI JU 13:00 pm a 14:00 pm"]
+    let location = ["Lun Mar Mie 9:00 am a 10:00 am","Lun Jue Vie 10:00 am a 11:00 am", "Mie Jue Vie 11:00 am a 12:00 pm", "Mar Mie Jue 13:00 pm a 14:00 pm"]
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
