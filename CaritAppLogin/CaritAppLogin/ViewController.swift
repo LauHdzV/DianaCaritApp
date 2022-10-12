@@ -7,6 +7,17 @@
 
 import UIKit
 
+struct Voluntario: Decodable{
+    let celular: String
+    let pass: String
+    let correo: String
+    let domicilio: String
+    let edad: Int
+    let id: Int
+    let nombre: String
+}
+
+
 class ViewController: UIViewController {
     @IBOutlet weak var tfUsuario: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
@@ -51,8 +62,9 @@ class ViewController: UIViewController {
             }
         }
         task.resume()
-        
     }
+    
+    
     
     @IBAction func buttonLogIn(_ sender: Any) {
         indicatorLogin.startAnimating()

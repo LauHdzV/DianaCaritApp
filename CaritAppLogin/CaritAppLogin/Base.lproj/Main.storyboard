@@ -596,12 +596,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Lvx-Ka-roP">
-                                        <rect key="frame" x="58" y="412" width="137" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-Rg-dh8">
-                                        <rect key="frame" x="230" y="422" width="119" height="30"/>
+                                        <rect key="frame" x="184" y="421" width="188" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <menu key="menu" id="IDP-hq-eje">
                                             <children>
@@ -610,7 +606,9 @@
                                             </children>
                                         </menu>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                            <color key="baseBackgroundColor" red="0.17030718540000001" green="0.53948579429999999" blue="0.63793298570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjC-GA-iGT">
                                         <rect key="frame" x="129" y="490" width="154" height="35"/>
@@ -644,6 +642,10 @@
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Lvx-Ka-roP">
+                                        <rect key="frame" x="39" y="412" width="137" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -1871,7 +1873,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="h5X-IH-eBB"/>
         <segue reference="tec-Xj-F7C"/>
-        <segue reference="7h3-Ca-ZT1"/>
+        <segue reference="uDz-j0-v8r"/>
         <segue reference="dII-ir-jRp"/>
     </inferredMetricsTieBreakers>
     <resources>
