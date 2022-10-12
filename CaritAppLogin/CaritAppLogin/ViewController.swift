@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func apiCall(){
+    /*func apiCall(){
         
         print("*************************")
         var liga = "https://equipo04.tc2007b.tec.mx:10202/users/\(tfUsuario.text!)"
@@ -62,6 +62,35 @@ class ViewController: UIViewController {
             }
         }
         task.resume()
+    }*/
+    
+    func signIn() {
+        let correoUser = tfUsuario.text!
+        let passwordUser = tfPassword.text!
+        let urlHttps = "https://equipo04.tc2007b.tec.mx:10202/users/\(correoUser)"
+        let url = URL(string: urlHttps)
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-type")
+        let body: [String: AnyHashable] = ["correo":correoUser, "contrasena":passwordUser]
+        let finalBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+        print(finalBody)
+        request.httpBody = finalBody
+        let task = URLSession.shared.dataTask(with: request){
+            data, response, error in
+            let decoder2 = JSONDecoder()
+            do{
+                print(data)
+                let userEncontrado = try decoder2.decode(Voluntario.self, from: data!)
+                DispatchQueue.main.async{
+                    print(userEncontrado)
+                }
+            }
+            catch{
+                print(error)
+            }
+        }
+        task.resume()
     }
     
     
@@ -70,9 +99,11 @@ class ViewController: UIViewController {
         indicatorLogin.startAnimating()
         btnLogin.isSelected = true
         
-        apiCall()
+        //apiCall()
         
-        if tfUsuario.text == "user" && tfPassword.text == "123"{
+        signIn()
+        
+        /*if tfUsuario.text == "user" && tfPassword.text == "123"{
             delay(2, closure: { () -> () in
                 self.indicatorLogin.stopAnimating()
                 self.btnLogin.isSelected = false
@@ -89,7 +120,7 @@ class ViewController: UIViewController {
                 self.present(alerta, animated: true)
             })
             
-        }
+        }*/
     }
     
 
