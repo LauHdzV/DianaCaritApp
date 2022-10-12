@@ -1505,7 +1505,7 @@
                                             <outlet property="image" destination="hif-he-7xh" id="MXt-3n-jTp"/>
                                             <outlet property="pDir" destination="vp2-Gz-7ev" id="Fzc-8K-hgZ"/>
                                             <outlet property="pTitle" destination="REj-PB-NJe" id="Lz5-wt-eEm"/>
-                                            <segue destination="hzq-e7-G5Z" kind="presentation" id="sqv-fQ-Poo"/>
+                                            <segue destination="hzq-e7-G5Z" kind="show" id="sqv-fQ-Poo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1535,7 +1535,7 @@
             <objects>
                 <viewController id="hzq-e7-G5Z" customClass="AdminProjectsViewController" customModule="CaritAppLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vok-2h-Zm8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9rk-Lh-uGd">
@@ -1543,21 +1543,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qqj-Oa-dTV">
-                                    <size key="itemSize" width="374" height="239"/>
+                                    <size key="itemSize" width="361" height="239"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="postUno" id="NIu-eZ-vfK" customClass="Post1" customModule="CaritAppLogin" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="239"/>
+                                        <rect key="frame" x="26.5" y="0.0" width="361" height="239"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5cG-A4-29Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="239"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="239"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plH-lJ-ZkK">
-                                                    <rect key="frame" x="20" y="28" width="342" height="203"/>
+                                                    <rect key="frame" x="20" y="18" width="329" height="213"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awx-Er-Pjb">
                                                             <rect key="frame" x="26" y="27" width="96" height="21"/>
@@ -1632,15 +1632,15 @@
                                                 <constraint firstAttribute="bottom" secondItem="plH-lJ-ZkK" secondAttribute="bottom" constant="12" id="5ev-oe-c72"/>
                                                 <constraint firstAttribute="trailing" secondItem="plH-lJ-ZkK" secondAttribute="trailing" constant="20" id="6Fh-MA-tJq"/>
                                                 <constraint firstAttribute="bottom" secondItem="plH-lJ-ZkK" secondAttribute="bottom" constant="8" id="DmU-nn-ar6"/>
-                                                <constraint firstItem="plH-lJ-ZkK" firstAttribute="top" secondItem="5cG-A4-29Q" secondAttribute="top" constant="28" id="EEx-PI-wOt"/>
+                                                <constraint firstItem="plH-lJ-ZkK" firstAttribute="top" secondItem="5cG-A4-29Q" secondAttribute="top" constant="18" id="EEx-PI-wOt"/>
                                                 <constraint firstAttribute="trailing" secondItem="plH-lJ-ZkK" secondAttribute="trailing" constant="12" id="PKw-Lx-mg3"/>
                                                 <constraint firstItem="plH-lJ-ZkK" firstAttribute="leading" secondItem="5cG-A4-29Q" secondAttribute="leading" constant="12" id="XWk-19-4Cr"/>
                                                 <constraint firstItem="plH-lJ-ZkK" firstAttribute="leading" secondItem="5cG-A4-29Q" secondAttribute="leading" constant="20" id="geC-U4-rbf"/>
-                                                <constraint firstItem="plH-lJ-ZkK" firstAttribute="top" secondItem="5cG-A4-29Q" secondAttribute="top" constant="28" id="lcN-sk-lzT"/>
+                                                <constraint firstItem="plH-lJ-ZkK" firstAttribute="top" secondItem="5cG-A4-29Q" secondAttribute="top" constant="18" id="lcN-sk-lzT"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="tintColor" red="0.51772966229999995" green="0.67901140989999997" blue="0.66271482500000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <size key="customSize" width="374" height="239"/>
+                                        <size key="customSize" width="361" height="239"/>
                                         <connections>
                                             <outlet property="background" destination="plH-lJ-ZkK" id="BzE-Zw-Zsg"/>
                                             <outlet property="botonConf" destination="qhX-6j-fLc" id="KHC-Kf-oet"/>
@@ -1660,6 +1660,7 @@
                         <viewLayoutGuide key="safeArea" id="rlO-FJ-3XR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Cla-lF-G7r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dd7-DT-rbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

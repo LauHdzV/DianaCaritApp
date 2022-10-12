@@ -11,7 +11,7 @@ class AdminProjectsViewController: UIViewController, UICollectionViewDelegate, U
     
     let nombres = ["Ricardo", "Jorge", "Diana", "Alberto"]
     let horarios = ["17:05 pm", "12:12 pm", "9:01 am", "8:00 am"]
-    let horarioS = ["20:05 pm", "15:12 pm,", "12:01 pm", "11:02"]
+    let horarioS = ["20:05 pm", "15:12 pm", "12:01 pm", "11:02"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return nombres.count
