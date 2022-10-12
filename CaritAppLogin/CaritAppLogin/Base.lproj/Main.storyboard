@@ -173,8 +173,8 @@
                                 <rect key="frame" x="39" y="365" width="170" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Voluntario ">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                <buttonConfiguration key="configuration" style="filled" image="hand.raised.fill" catalog="system" title=" Voluntario ">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                                     <color key="baseBackgroundColor" red="0.1030240221" green="0.5236482093" blue="0.6039725266" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -185,8 +185,8 @@
                                 <rect key="frame" x="216" y="366" width="170" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Administrador">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                <buttonConfiguration key="configuration" style="filled" image="person.2.fill" catalog="system" title="Administrador">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                                     <color key="baseBackgroundColor" red="1" green="0.61176470589999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -654,6 +654,7 @@
                     <navigationItem key="navigationItem" id="nqi-C8-aJ9"/>
                     <connections>
                         <outlet property="background" destination="Jhg-Wu-C6w" id="PRo-CU-ZQ3"/>
+                        <outlet property="buttonElegirHorario" destination="VF9-Rg-dh8" id="HqC-0o-sXc"/>
                         <outlet property="image" destination="r8j-pm-09Q" id="Ojb-qK-6n0"/>
                         <outlet property="informacion" destination="A5t-Er-xiD" id="bKT-e4-AEw"/>
                         <outlet property="project" destination="oPm-Vt-Olf" id="3sw-mK-SwL"/>
@@ -1764,6 +1765,7 @@
                                             <outlet property="image" destination="bRW-26-l8V" id="XSi-wd-Imm"/>
                                             <outlet property="pDir" destination="dwt-RO-huJ" id="PAz-Wt-rBs"/>
                                             <outlet property="pTitle" destination="FMK-JI-37p" id="4NM-f2-XXA"/>
+                                            <segue destination="n9S-qi-PCz" kind="presentation" id="VjS-dO-P3k"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1781,6 +1783,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEm-ja-Wke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763.7681159420292" y="2140.8482142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wTg-fr-Vb5">
+            <objects>
+                <viewController id="n9S-qi-PCz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XNg-IT-bGo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTr-7C-khf">
+                                <rect key="frame" x="112" y="245" width="126" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cerrar sesión"/>
+                                <connections>
+                                    <segue destination="3M0-ZU-InN" kind="presentation" modalPresentationStyle="fullScreen" id="rrB-Jo-weW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f4d-8E-4Jo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srd-9v-Rg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2616" y="2154"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="s9g-CX-OqO">
@@ -1841,9 +1869,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0n0-Dv-4CX"/>
+        <segue reference="h5X-IH-eBB"/>
+        <segue reference="tec-Xj-F7C"/>
         <segue reference="7h3-Ca-ZT1"/>
-        <segue reference="DPw-q2-uH3"/>
+        <segue reference="dII-ir-jRp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="29542496_1811504518869839_5606888313433666676_n.jpg" width="787" height="787"/>
@@ -1857,6 +1886,7 @@
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.backward.circle.fill" catalog="system" width="128" height="123"/>
         <image name="clock.badge" catalog="system" width="128" height="123"/>
+        <image name="hand.raised.fill" catalog="system" width="128" height="128"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="location" catalog="system" width="128" height="121"/>
