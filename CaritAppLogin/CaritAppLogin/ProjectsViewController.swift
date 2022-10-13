@@ -177,13 +177,16 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailProject" {
             if let destino = segue.destination as? DetailViewController, let index = myCollectionView.indexPathsForSelectedItems?.first {
+                
+                self.defaults.setValue(listaProyectos[index.row].favorito, forKey: "idFavorito")
+                print(listaProyectos[index.row].favorito)
                 destino.tituloMostrar = listaProyectos[index.row].nombre
                 destino.desc = listaProyectos[index.row].definicion
                 destino.locationMostrar = listaProyectos[index.row].ubicacion
-                
+                destino.horario = listaProyectos[index.row].horario
                 self.defaults.setValue(listaProyectos[index.row].proyecto_id, forKey: "idProyecto")
 
-                
+    
                 if listaProyectos[index.row].nombre == "Banco de Alimentos" {
                     destino.imagenMostrar = "alimentos"
                 }

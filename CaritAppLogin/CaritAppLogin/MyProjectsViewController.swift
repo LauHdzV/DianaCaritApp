@@ -9,6 +9,7 @@ import UIKit
 
 class MyProjectsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    
     let images = ["alimentos"]
     let titles = ["Banco de Ropa"]
     let dates = ["9:00 am - 11:00 am Lun Mar Mie Jue Vie"]
