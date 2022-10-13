@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var indicatorLogin: UIActivityIndicatorView!
     
-    var hayVoluntario: Bool = false
+    let defaults = UserDefaults.standard
+
+    
+    var VoluntarioInicial: Int!
     
     struct Voluntario: Decodable{
         let celular: String
@@ -69,52 +72,6 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    func signIn() {
-        let correoUser = tfUsuario.text!
-        let passwordUser = tfPassword.text!
-        indicatorLogin.startAnimating()
-        btnLogin.isSelected = true
-        let urlHttps = "https://equipo04.tc2007b.tec.mx:10202/users/\(correoUser)"
-        let url = URL(string: urlHttps)
-        var request = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-type")
-        let body: [String: AnyHashable] = ["correo":correoUser, "contrasena":passwordUser]
-        let finalBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
-        request.httpBody = finalBody
-        let task = URLSession.shared.dataTask(with: request){
-            data, response, error in
-            let decoder2 = JSONDecoder()
-            do{
-                let userEncontrado = try decoder2.decode(Voluntario.self, from: data!)
-                DispatchQueue.main.async{
-                    print(userEncontrado.correo)
-                    if userEncontrado.correo != "a" {
-                        print("AAAAAAAAAAAAAAAAAAAAA")
-                            delay(2, closure: { () -> () in
-                                self.indicatorLogin.stopAnimating()
-                                self.btnLogin.isSelected = false
-                                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                            })
-                        }else{
-                            print("BBBBBBBBBBBBBBBBBB")
-                                self.indicatorLogin.stopAnimating()
-                                self.btnLogin.isSelected = false
-                                // Pop Up Alerta
-                                let alerta = UIAlertController(title: "Usuario o Contraseña Incorrecta", message: "Favor de insertar los valores correctos", preferredStyle: .alert)
-                                let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                                alerta.addAction(botonCancel)
-                                self.present(alerta, animated: true)
-                            
-                        }
-                }
-            }
-            catch{
-                print(error)
-            }
-        }
-        task.resume()
-    }
     
     
     
@@ -147,7 +104,12 @@ class ViewController: UIViewController {
                         print("AAAAAAAAAAAAAAAAAAAAA")
                                 self.indicatorLogin.stopAnimating()
                                 self.btnLogin.isSelected = false
+                                self.VoluntarioInicial = userEncontrado.id
+                                self.defaults.setValue(userEncontrado.id, forKey: "idVoluntario")
+                    
                                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                                
+                        
                         }else{
                             print("BBBBBBBBBBBBBBBBBB")
                                 self.indicatorLogin.stopAnimating()
@@ -183,9 +145,10 @@ class ViewController: UIViewController {
                 self.present(alerta, animated: true)
             })
             
-        }*/ 
+        }*/
     }
     
+        
 
 }
 
