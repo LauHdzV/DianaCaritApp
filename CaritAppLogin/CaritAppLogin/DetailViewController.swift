@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     var imagenMostrar: String!
     var locationMostrar: String!
     var desc: String!
-    var horario: String!
+    var horarios: String!
     
     let defaults = UserDefaults.standard
     
@@ -110,7 +110,7 @@ class DetailViewController: UIViewController {
         
         let finalBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
         request.httpBody = finalBody
-        /*let task = URLSession.shared.dataTask(with: request){
+        let task = URLSession.shared.dataTask(with: request){
             data, response, error in
             let decoder2 = JSONDecoder()
             do{
@@ -127,7 +127,7 @@ class DetailViewController: UIViewController {
                 print(error)
             }
         }
-        task.resume()*/
+        task.resume()
     }
     
     override func viewDidLoad() {
@@ -155,7 +155,7 @@ class DetailViewController: UIViewController {
         
         print("AHUUUUUUUUU")
         
-        let horariosArray : [String] = horario.components(separatedBy: "/")
+        let horariosArray : [String] = horarios.components(separatedBy: "/")
 
         let optionClosure = {(action : UIAction) in self.horaProyecto = self.buttonElegirHorario.currentTitle}
         

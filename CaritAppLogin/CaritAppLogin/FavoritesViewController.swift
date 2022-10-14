@@ -35,6 +35,7 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
         let ubicacion: String
         let validado: Int
         let voluntario_id: Int
+        let horarios: String
         
     }
     
@@ -161,7 +162,7 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
                 destino.tituloMostrar = listaProyectos[index.row].nombre
                 destino.desc = listaProyectos[index.row].definicion
                 destino.locationMostrar = listaProyectos[index.row].ubicacion
-                destino.horario = listaProyectos[index.row].horario
+                destino.horarios = listaProyectos[index.row].horarios
 
                 self.defaults.setValue(listaProyectos[index.row].proyecto_id, forKey: "idProyecto")
                 self.defaults.setValue(listaProyectos[index.row].favorito, forKey: "idFavorito")

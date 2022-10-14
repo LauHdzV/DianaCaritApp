@@ -79,10 +79,20 @@ class ViewController: UIViewController {
         indicatorLogin.startAnimating()
         btnLogin.isSelected = true
         
+        
         //apiCall()
         
         let correoUser = tfUsuario.text!
         let passwordUser = tfPassword.text!
+        
+        if correoUser == "" || passwordUser == ""   {
+            let alerta = UIAlertController(title: "Usuario o Contraseña Incorrecta", message: "Favor de insertar los valores correctos", preferredStyle: .alert)
+            let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alerta.addAction(botonCancel)
+            self.present(alerta, animated: true)
+        }
+        
+        
         indicatorLogin.startAnimating()
         btnLogin.isSelected = true
         let urlHttps = "https://equipo04.tc2007b.tec.mx:10202/users/\(correoUser)"
@@ -99,9 +109,9 @@ class ViewController: UIViewController {
             do{
                 let userEncontrado = try decoder2.decode(Voluntario.self, from: data!)
                 DispatchQueue.main.async{
-                    print(userEncontrado.correo)
+                    //print(userEncontrado.correo)
                     if userEncontrado.correo != "a" {
-                        print("AAAAAAAAAAAAAAAAAAAAA")
+                        //print("AAAAAAAAAAAAAAAAAAAAA")
                                 self.indicatorLogin.stopAnimating()
                                 self.btnLogin.isSelected = false
                                 self.VoluntarioInicial = userEncontrado.id
@@ -111,7 +121,7 @@ class ViewController: UIViewController {
                                 
                         
                         }else{
-                            print("BBBBBBBBBBBBBBBBBB")
+                            //print("BBBBBBBBBBBBBBBBBB")
                                 self.indicatorLogin.stopAnimating()
                                 self.btnLogin.isSelected = false
                                 // Pop Up Alerta

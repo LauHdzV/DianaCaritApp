@@ -13,6 +13,8 @@
 		F796EE2A28C99C8B0034CE58 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */; };
 		F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */; };
 		F796EE2E28C99D0A0034CE58 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2D28C99D0A0034CE58 /* FavoritesViewController.swift */; };
+		F7C4783228F9324F00807C2D /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C4783128F9324F00807C2D /* AdminLoginViewController.swift */; };
+		F7C4783428F97D7600807C2D /* ValidarVoluntarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C4783328F97D7600807C2D /* ValidarVoluntarioViewController.swift */; };
 		F7E9E8D028EFE645002B6391 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9E8CF28EFE645002B6391 /* ProjectListViewController.swift */; };
 		F7E9E8D228EFE867002B6391 /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9E8D128EFE867002B6391 /* RegistrarViewController.swift */; };
 		FB05F6C228E8AE350019CC70 /* AdminConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */; };
@@ -47,6 +49,8 @@
 		F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		F796EE2D28C99D0A0034CE58 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F796EE2F28C99D1E0034CE58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F7C4783128F9324F00807C2D /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
+		F7C4783328F97D7600807C2D /* ValidarVoluntarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidarVoluntarioViewController.swift; sourceTree = "<group>"; };
 		F7E9E8CF28EFE645002B6391 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
 		F7E9E8D128EFE867002B6391 /* RegistrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
 		FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConfirmViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +123,10 @@
 				FB63056128C7929E00FBAA1B /* SceneDelegate.swift */,
 				FB63056328C7929E00FBAA1B /* ViewController.swift */,
 				FB28EAD328E656870022A671 /* Model.swift */,
+				F7C4783328F97D7600807C2D /* ValidarVoluntarioViewController.swift */,
 				FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */,
 				FB63056528C7929E00FBAA1B /* Main.storyboard */,
+				F7C4783128F9324F00807C2D /* AdminLoginViewController.swift */,
 				54BBE6B428F5C06E007BCB44 /* AprobarViewController.swift */,
 				54BBE6B128F5C044007BCB44 /* Aprobar.h */,
 				F75313D428F536C100B7998A /* FirstScreenViewController.swift */,
@@ -227,6 +233,7 @@
 				FB63056428C7929E00FBAA1B /* ViewController.swift in Sources */,
 				F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */,
 				FB6B8BD428C8DFBE003C38F5 /* DashboardViewController.swift in Sources */,
+				F7C4783428F97D7600807C2D /* ValidarVoluntarioViewController.swift in Sources */,
 				FB28EAD628E65DD30022A671 /* AdminProjectsViewController.swift in Sources */,
 				F75313D528F536C100B7998A /* FirstScreenViewController.swift in Sources */,
 				F7E9E8D028EFE645002B6391 /* ProjectListViewController.swift in Sources */,
@@ -237,6 +244,7 @@
 				FB28EAD428E656870022A671 /* Model.swift in Sources */,
 				FB63056228C7929E00FBAA1B /* SceneDelegate.swift in Sources */,
 				FB32902328DA16A8003755D4 /* UIColor+Extension.swift in Sources */,
+				F7C4783228F9324F00807C2D /* AdminLoginViewController.swift in Sources */,
 				FB32902128DA167C003755D4 /* JPieChartDataSet.swift in Sources */,
 				FB05F6C228E8AE350019CC70 /* AdminConfirmViewController.swift in Sources */,
 				FB49DC3928E33EF2004C5A05 /* DatePickerViewController.swift in Sources */,

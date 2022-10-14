@@ -33,7 +33,7 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegate, UIColl
         let ubicacion: String
         let validado: Int
         let voluntario_id: Int
-        
+        let horarios: String
     }
     
     @IBAction func proyectoSeleccionado(_ sender: Any) {
@@ -178,12 +178,12 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegate, UIColl
         if segue.identifier == "detailProject" {
             if let destino = segue.destination as? DetailViewController, let index = myCollectionView.indexPathsForSelectedItems?.first {
                 
+
                 self.defaults.setValue(listaProyectos[index.row].favorito, forKey: "idFavorito")
-                print(listaProyectos[index.row].favorito)
                 destino.tituloMostrar = listaProyectos[index.row].nombre
                 destino.desc = listaProyectos[index.row].definicion
                 destino.locationMostrar = listaProyectos[index.row].ubicacion
-                destino.horario = listaProyectos[index.row].horario
+                destino.horarios = listaProyectos[index.row].horarios
                 self.defaults.setValue(listaProyectos[index.row].proyecto_id, forKey: "idProyecto")
 
     

@@ -9,42 +9,142 @@ import UIKit
 
 class ProjectListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let images = ["alimentos", "ropa", "medicamentos", "emergencia"]
-    let titles = ["Banco de alimentos", "Banco de Ropa", "Banco de Medicamentos", "Campañas de Emergencia"]
-    let location = ["Lun Mar Mie 9:00 am a 10:00 am","Lun Jue Vie 10:00 am a 11:00 am", "Mie Jue Vie 11:00 am a 12:00 pm", "Mar Mie Jue 13:00 pm a 14:00 pm"]
+    @IBOutlet weak var myViewController: UICollectionView!
+    let defaults = UserDefaults.standard
     
+    
+    let images = ["alimentos", "ropa", "medicamentos" , "centros", "ducha", "emergencia", "peregrino", "vestido"]
+    struct Proyecto: Decodable{
+        let calificacion: Double
+        let definicion: String
+        let horarios: String
+        let id: Int
+        let nombre: String
+        let responsable_id: Int
+        let ubicacion: String
+        
+    }
+    
+    var listaProyectos = [Proyecto]()
+    var idAdmin: Int!
+    var idProyectoAdmin: Int!
+    
+    func getAllProjects(){
+        self.idAdmin = defaults.integer(forKey: "idAdmin")
+        let url3 = "https://equipo04.tc2007b.tec.mx:10202/proyectos-responsable/\(self.idAdmin!)"
+        print(url3)
+        guard let url = URL(string: url3) else { return }
+        
+        let group = DispatchGroup()
+        group.enter()
+        
+        print("WWWWWWWWWWWWWWWWWWWW")
+        let task = URLSession.shared.dataTask(with: url){
+            data, response, error in
+            let decoder2 = JSONDecoder()
+            print("JJJJJJJJJJJJJJJJJ")
+            
+            do{
+                print("JJJJJJJJJJJJJJJJJ")
+                let resultadoGeneral = try decoder2.decode([Proyecto].self, from: data!)
+                let Pokelist = resultadoGeneral
+                print("XXXXXXXXXX")
+                self.listaProyectos = Pokelist
+                group.leave()
+                
+            }
+            catch{
+                print(error)
+            }
+        }
+        task.resume()
+        group.wait()
+        myViewController.reloadData()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return listaProyectos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cel = collectionView.dequeueReusableCell(withReuseIdentifier: "post10", for: indexPath) as! Post10
-        cel.image.image = UIImage(named: images[indexPath.row])
-        cel.pTitle.text = titles[indexPath.row]
-        cel.pDir.text = location[indexPath.row]
-        return cel
+        
+        let titleA = listaProyectos[indexPath.row].nombre
+        
+        let horariosArray : [String] = listaProyectos[indexPath.row].horarios.components(separatedBy: "/")
+        var newString = ""
+        newString = horariosArray[0]
+        for (index, itemA) in horariosArray.enumerated(){
+            if index != 0 {
+                newString = newString + "  |  " + itemA
+            }
+        }
+        
+        
+        
+        let ubicacionA = newString
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "post10", for: indexPath) as! Post10
+        
+        if titleA == "Banco de Alimentos" {
+            cell.image?.image = UIImage(named: "alimentos")
+        }
+        if titleA == "Banco de Ropa" {
+            cell.image?.image = UIImage(named: "ropa")
+        }
+        if titleA == "Banco de Medicamentos" {
+            cell.image?.image = UIImage(named: "medicamentos")
+        }
+        if titleA == "Reestructuracion de Centros" {
+            cell.image?.image = UIImage(named: "centros")
+        }
+        if titleA == "Dignamente Vestido" {
+            cell.image?.image = UIImage(named: "vestido")
+        }
+        if titleA == "Ducha-T" {
+            cell.image?.image = UIImage(named: "ducha")
+        }
+        if titleA == "Campañas de Emergencia" {
+            cell.image?.image = UIImage(named: "emergencia")
+        }
+        if titleA == "Posada del Peregrino" {
+            cell.image?.image = UIImage(named: "peregrino")
+        }
+        cell.pTitle?.text = titleA
+        cell.pDir?.text = ubicacionA
+        return cell
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getAllProjects()
+        
         // Do any additional setup after loading the view.
     }
-
-}
-
-class Post10: UICollectionViewCell{
     
-    @IBOutlet weak var background: UIView!
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var pTitle: UILabel!
-    @IBOutlet weak var pDir: UILabel!
-    
-    override func awakeFromNib() {
-        background.layer.cornerRadius = 12
-        image.layer.cornerRadius = 12
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mostrarHoras" {
+            if let destino = segue.destination as? AdminProjectsViewController, let index = myViewController.indexPathsForSelectedItems?.first {
+                print("LLLLLLLLLLLLLL")
+                destino.idProyectoAdmin = listaProyectos[index.row].id
+            }
+        }
     }
     
+    
 }
+    
+class Post10: UICollectionViewCell{
+        
+        @IBOutlet weak var background: UIView!
+        @IBOutlet weak var image: UIImageView!
+        @IBOutlet weak var pTitle: UILabel!
+        @IBOutlet weak var pDir: UILabel!
+        
+        override func awakeFromNib() {
+            background.layer.cornerRadius = 12
+            image.layer.cornerRadius = 12
+        }
+        
+    }
+
