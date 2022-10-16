@@ -1047,7 +1047,7 @@
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="cc0-r9-itG">
                                         <rect key="frame" x="171" y="229" width="82" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <locale key="locale" localeIdentifier="pt"/>
+                                        <locale key="locale" localeIdentifier="es_MX"/>
                                         <connections>
                                             <action selector="dateAction:" destination="b5E-7j-qNq" eventType="valueChanged" id="Bri-Z1-kaY"/>
                                         </connections>
@@ -1080,7 +1080,7 @@
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ecx-xU-DYQ">
                                         <rect key="frame" x="171" y="339" width="82" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <locale key="locale" localeIdentifier="pt"/>
+                                        <locale key="locale" localeIdentifier="es_MX"/>
                                         <connections>
                                             <action selector="dateAction2:" destination="b5E-7j-qNq" eventType="valueChanged" id="Ph7-zO-ZoA"/>
                                         </connections>
@@ -2061,7 +2061,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="h5X-IH-eBB"/>
         <segue reference="tec-Xj-F7C"/>
-        <segue reference="7h3-Ca-ZT1"/>
+        <segue reference="uDz-j0-v8r"/>
         <segue reference="dII-ir-jRp"/>
     </inferredMetricsTieBreakers>
     <resources>

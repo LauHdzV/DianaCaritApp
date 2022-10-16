@@ -54,7 +54,7 @@ class RegistrarViewController: UIViewController {
 
         let time = Date()
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_gb")
+        formatter.locale = Locale(identifier: "fi_Fi")
         formatter.dateFormat = "HH:mm"
         
         let timePicker = UIDatePicker()
@@ -81,7 +81,7 @@ class RegistrarViewController: UIViewController {
     @objc func timePickerValueChanged(sender: UIDatePicker){
         //cuando el tiempo cambie, se pondra aca
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_gb")
+        formatter.locale = Locale(identifier: "fi_Fi")
         formatter.dateFormat = "HH:mm"
     }
     
