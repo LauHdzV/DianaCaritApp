@@ -11,6 +11,7 @@ class AdminProjectsViewController: UIViewController, UICollectionViewDelegate, U
     
 
     @IBOutlet weak var myViewController: UICollectionView!
+    
     let nombres = ["Ricardo", "Jorge", "Diana", "Alberto"]
     let horarios = ["17:05 pm", "12:12 pm", "9:01 am", "8:00 am"]
     let horarioS = ["20:05 pm", "15:12 pm", "12:01 pm", "11:02"]
@@ -25,6 +26,10 @@ class AdminProjectsViewController: UIViewController, UICollectionViewDelegate, U
         var tiempo: Float!
         var validado: Int!
         var voluntario_id: Int!
+    }
+    
+    struct Mensaje: Decodable{
+        var mensaje: String!
     }
     
     let defaults = UserDefaults.standard
@@ -107,9 +112,53 @@ class AdminProjectsViewController: UIViewController, UICollectionViewDelegate, U
         return cell
     }
     
-
+    
+    
     @IBAction func confirmar(_ sender: Any) {
         print("IIIIIIIIIIIIIIII")
+        
+        if let index = myViewController.indexPathsForSelectedItems?.first {
+            let manuel = (listaVisita[index.row].id)!
+            print("rrrrrrrrrr")
+            print(manuel)
+            
+            let urlHttps = "https://equipo04.tc2007b.tec.mx:10202/visita/\(manuel)"
+            print(urlHttps)
+            let url = URL(string: urlHttps)
+            var request = URLRequest(url: url!)
+            request.httpMethod = "PUT"
+            request.setValue("application/json", forHTTPHeaderField: "Content-type")
+            let body : [String: AnyHashable] = ["men": "men"]
+
+            let finalBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+            request.httpBody = finalBody
+            
+            print("UUUUUUUUUUUUUUU")
+
+            
+            
+            let task = URLSession.shared.dataTask(with: request){
+                data, response, error in
+                let decoder2 = JSONDecoder()
+                do{
+                    print("UUUUUUUUUUUUUUU")
+
+                    let userEncontrado = try decoder2.decode(Mensaje.self, from: data!)
+                    DispatchQueue.main.async{
+                        print(userEncontrado.mensaje)
+                        let alerta = UIAlertController(title: userEncontrado.mensaje, message: "Bien ahi", preferredStyle: .alert)
+                        let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alerta.addAction(botonCancel)
+                        self.present(alerta, animated: true)
+                    }
+                }
+                catch{
+                    print(error)
+                }
+            }
+            task.resume()
+        }
+        
         
 
         /*let indexPath = self.myViewController.indexPathsForSelectedItems?.last ?? IndexPath(item: 0, section: 0)
@@ -169,7 +218,49 @@ class AdminProjectsViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func declinar(_ sender: Any) {
-    }
+        print("IIIIIIIIIIIIIIII")
+        
+        if let index = myViewController.indexPathsForSelectedItems?.first {
+            let manuel = (listaVisita[index.row].id)!
+            print("rrrrrrrrrr")
+            print(manuel)
+            
+            let urlHttps = "https://equipo04.tc2007b.tec.mx:10202/canvisita/\(manuel)"
+            print(urlHttps)
+            let url = URL(string: urlHttps)
+            var request = URLRequest(url: url!)
+            request.httpMethod = "PUT"
+            request.setValue("application/json", forHTTPHeaderField: "Content-type")
+            let body : [String: AnyHashable] = ["men": "men"]
+            
+            let finalBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+            request.httpBody = finalBody
+            
+            print("UUUUUUUUUUUUUUU")
+            
+            
+            
+            let task = URLSession.shared.dataTask(with: request){
+                data, response, error in
+                let decoder2 = JSONDecoder()
+                do{
+                    print("UUUUUUUUUUUUUUU")
+                    
+                    let userEncontrado = try decoder2.decode(Mensaje.self, from: data!)
+                    DispatchQueue.main.async{
+                        print(userEncontrado.mensaje)
+                        let alerta = UIAlertController(title: userEncontrado.mensaje, message: "Mal ahi", preferredStyle: .alert)
+                        let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alerta.addAction(botonCancel)
+                        self.present(alerta, animated: true)
+                    }
+                }
+                catch{
+                    print(error)
+                }
+            }
+            task.resume()
+        }}
     
     override func viewDidLoad() {
         super.viewDidLoad()

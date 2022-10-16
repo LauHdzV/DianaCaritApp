@@ -68,7 +68,7 @@ class RegisterViewController: UIViewController {
                             }else{
 
                                     // Pop Up Alerta
-                                    let alerta = UIAlertController(title: "NO SE CREO USUARIO", message: "Favor de insertar los valores correctos", preferredStyle: .alert)
+                                let alerta = UIAlertController(title: "NO SE CREO USUARIO", message: userEncontrado.mensaje, preferredStyle: .alert)
                                     let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                                     alerta.addAction(botonCancel)
                                     self.present(alerta, animated: true)

@@ -29,6 +29,8 @@ class AprobarViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var listaProyectos = [Proyecto]()
     var idAdmin: Int!
+    var idProyectoAdmin: Int!
+
 
     func getAllProjects(){
         self.idAdmin = defaults.integer(forKey: "idAdmin")
@@ -105,12 +107,21 @@ class AprobarViewController: UIViewController, UICollectionViewDelegate, UIColle
         return cell
     }
     
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllProjects()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mmmmm" {
+            if let destino = segue.destination as? ValidarVoluntarioViewController, let index = myCollectionView.indexPathsForSelectedItems?.first {
+                print("LLLLLLLLLLLLLL")
+                destino.idProyectoAdmin = listaProyectos[index.row].id
+            }
+        }
     }
     
 

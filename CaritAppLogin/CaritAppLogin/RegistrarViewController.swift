@@ -46,6 +46,8 @@ class RegistrarViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        
+        
         image.image = UIImage(named: imagen)
         background2.layer.cornerRadius = 24
         
@@ -59,6 +61,10 @@ class RegistrarViewController: UIViewController {
         timePicker.datePickerMode = .time
         timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged )
         timePicker.frame.size = CGSize(width: 0, height: 250);
+        
+        
+        self.horaInicial = formatter.string(from: time)
+        self.horaFinal = formatter.string(from: time)
         
         /*let now = NSDate()
         let components = gregorian.components([.Hour, .Minute], fromDate: now)

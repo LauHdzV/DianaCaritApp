@@ -44,7 +44,7 @@ class MyProjectsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     lazy var refreshControl:UIRefreshControl = {
         let refresControl = UIRefreshControl()
-        refresControl.addTarget(self, action: #selector(FavoritesViewController.actualizarDatos(_:)), for: .valueChanged)
+        refresControl.addTarget(self, action: #selector(MyProjectsViewController.actualizarDatos(_:)), for: .valueChanged)
         refresControl.tintColor = UIColor.caritasGris
         return refresControl
     }()
