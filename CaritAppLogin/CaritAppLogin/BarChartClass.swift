@@ -43,7 +43,7 @@ class BarChartView: UIView {
             let hei = ((Double(values[i] * 100 ) / maxValue) * self.frame.height) / 100 - 5
             let textheight = (Double((1 * 100 ) / maxValue) * self.frame.height) / 100 //labels with height of 1
         
-            view.backgroundColor = .systemTeal
+            view.backgroundColor = .caritasGrisV
             
             let hi = self.frame.height
             view.frame = CGRect(x: num, y: (self.frame.maxY - self.frame.origin.y), width: barwidth, height: (hi-(hi + hei)) )
@@ -55,7 +55,7 @@ class BarChartView: UIView {
             text.text = "\(values[i])"
             text.textAlignment = .center
             text.adjustsFontSizeToFitWidth = true
-            if(i % 2 == 0){ view.backgroundColor = .systemBlue}
+            if(i % 2 == 0){ view.backgroundColor = .caritasGris}
 
          //Bar description
             let labelheight = 1.5 * Double(textheight)
