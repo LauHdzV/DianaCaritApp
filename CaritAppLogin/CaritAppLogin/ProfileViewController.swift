@@ -13,6 +13,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var pieChart: JPieChart!
     @IBOutlet weak var barChart: BarChartView!
     
+    @IBOutlet weak var totalHoras: UILabel!
+    
+    @IBOutlet weak var proyecto1: UILabel!
+    @IBOutlet weak var proyecto2: UILabel!
+    @IBOutlet weak var proyecto3: UILabel!
+    @IBOutlet weak var proyecto4: UILabel!
+    
     let defaults = UserDefaults.standard
     var idVoluntario: Int!
     
@@ -31,7 +38,7 @@ class ProfileViewController: UIViewController {
 
     
     // Declaracion de valores iniciales
-    let valoresTabla = [2.0, 3.0, 1.0, 2.0, 3.0, 5.0, 2.0, 3.0, 1.0, 2.0, 3.0, 5.0]
+    let valoresTabla = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
     let etiquetasFechas = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
     
     func getPerfil() {
@@ -59,23 +66,56 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         getPerfil()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)){
-            // Declaracion de grafica de pastel
-            self.pieChart.addChartData(data: [
-                JPieChartDataSet(percent: 15, colors: [UIColor.caritasAcua,UIColor.caritasAcua]),
-                JPieChartDataSet(percent: 10, colors: [UIColor.caritasGris,UIColor.caritasGris]),
-                JPieChartDataSet(percent: 45, colors: [UIColor.caritasRosita,UIColor.caritasRosita]),
-                JPieChartDataSet(percent: 30, colors: [UIColor.caritasNaranja,UIColor.caritasNaranja])
-             ])
             
+            self.totalHoras.text = String(self.perfil.horasTotales)
+            // Declaracion de grafica de pastel
+            
+            var pieChart = [JPieChartDataSet]()
+            var aux = 0
+            self.proyecto1.text = ""
+            self.proyecto2.text = ""
+            self.proyecto3.text = ""
+            self.proyecto4.text = ""
+            
+            for i in self.perfil.porcentajePorProyecto{
+                if aux == 0 {
+                    pieChart.append(JPieChartDataSet(percent: CGFloat(i), colors: [UIColor.caritasAcua,UIColor.caritasAcua]))
+                    self.proyecto1.text = self.perfil.proyectosParticipando[aux]
+
+                } else if aux == 1 {
+                    pieChart.append(JPieChartDataSet(percent: CGFloat(i), colors: [UIColor.caritasGris,UIColor.caritasGris]))
+                    self.proyecto2.text = self.perfil.proyectosParticipando[aux]
+
+                } else if aux == 2 {
+                    pieChart.append(JPieChartDataSet(percent: CGFloat(i), colors: [UIColor.caritasRosita,UIColor.caritasRosita]))
+                    self.proyecto3.text = self.perfil.proyectosParticipando[aux]
+
+                } else if aux == 3 {
+                    pieChart.append(JPieChartDataSet(percent: CGFloat(i), colors: [UIColor.caritasNaranja,UIColor.caritasNaranja]))
+                    self.proyecto4.text = self.perfil.proyectosParticipando[aux]
+                }
+                aux = aux + 1
+            }
+            
+            if pieChart.isEmpty {
+                self.pieChart.addChartData(data: [JPieChartDataSet(percent: 100, colors: [UIColor.caritasAcua,UIColor.caritasAcua])])
+            } else {
+                self.pieChart.addChartData(data: pieChart)
+            }
+                        
             self.pieChart.lineWidth = 0.85
             
             // Declaracion de grafica de barras
-            self.barChart.maxValue = 18.0
-            self.barChart.drawChart(self.perfil.horasPorMes,self.perfil.meses)
-
+            self.barChart.maxValue = Double(self.perfil.horasTotales)
+            if self.perfil.horasPorProyecto.isEmpty{
+                self.barChart.drawChart(self.valoresTabla,self.etiquetasFechas)
+            } else {
+                self.barChart.drawChart(self.perfil.horasPorMes,self.perfil.meses)
+            }
         }
         
         

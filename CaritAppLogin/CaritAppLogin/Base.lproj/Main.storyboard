@@ -864,13 +864,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-ZM-U8j">
-                                        <rect key="frame" x="175" y="49" width="38" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resumen de horas por mes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n8-Tn-bVW">
                                         <rect key="frame" x="63" y="421" width="259" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -883,6 +876,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-ZM-U8j">
+                                        <rect key="frame" x="130" y="51" width="145" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </view>
                         </subviews>
@@ -911,6 +911,11 @@
                     <connections>
                         <outlet property="barChart" destination="C1A-0C-ved" id="Yn5-x5-AUa"/>
                         <outlet property="pieChart" destination="hsy-2t-Pim" id="aAq-2R-Y9f"/>
+                        <outlet property="proyecto1" destination="jpy-To-XhW" id="qIj-4W-33k"/>
+                        <outlet property="proyecto2" destination="964-iG-1Rc" id="1hX-25-EKS"/>
+                        <outlet property="proyecto3" destination="otL-HL-K3W" id="dP7-2t-NaY"/>
+                        <outlet property="proyecto4" destination="psv-Tf-vBM" id="nYr-3a-6Zy"/>
+                        <outlet property="totalHoras" destination="iBM-ZM-U8j" id="P1V-YE-xN9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3M-4f-zzy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2059,7 +2064,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="h5X-IH-eBB"/>
+        <segue reference="O6o-PF-gI5"/>
         <segue reference="tec-Xj-F7C"/>
         <segue reference="uDz-j0-v8r"/>
         <segue reference="dII-ir-jRp"/>

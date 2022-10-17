@@ -127,7 +127,7 @@ class RegistrarViewController: UIViewController {
         
         stringTotalH = String(totalH)
         
-        let body : [String: AnyHashable] = ["proyecto_id":self.idProyecto, "voluntario_id":self.idVoluntario, "hora_inicio": self.horaInicial, "hora_salida": self.horaFinal, "dia": hoy, "tiempo": totalH]
+        let body : [String: AnyHashable] = ["proyecto_id":self.idProyecto, "voluntario_id":self.idVoluntario, "hora_inicio": self.horaInicial, "hora_salida": self.horaFinal, "dia": hoy, "tiempo": ceil(totalH)]
 
         let finalBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
         request.httpBody = finalBody
@@ -162,7 +162,7 @@ class RegistrarViewController: UIViewController {
      
     @IBAction func dateAction(_ sender: Any) {
         let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "hh:mm"
+        dateFormater.dateFormat = "HH:mm"
         self.horaInicial = dateFormater.string(from: DatePicker.date)
         print(self.horaInicial)
         /*
@@ -171,7 +171,7 @@ class RegistrarViewController: UIViewController {
     
     @IBAction func dateAction2(_ sender: Any) {
         let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "hh:mm"
+        dateFormater.dateFormat = "HH:mm"
         self.horaFinal = dateFormater.string(from: DatePicker2.date)
         print(self.horaFinal)
         /*
