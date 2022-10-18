@@ -138,7 +138,7 @@ class RegistrarViewController: UIViewController {
                 let userEncontrado = try decoder2.decode(Mensaje.self, from: data!)
                 DispatchQueue.main.async{
                     print(userEncontrado.mensaje)
-                    let alerta = UIAlertController(title: userEncontrado.mensaje, message: "Se han registrado las horas", preferredStyle: .alert)
+                    let alerta = UIAlertController(title: userEncontrado.mensaje, message: "En breve un administrador aprobará tus horas", preferredStyle: .alert)
                     let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alerta.addAction(botonCancel)
                     self.present(alerta, animated: true)

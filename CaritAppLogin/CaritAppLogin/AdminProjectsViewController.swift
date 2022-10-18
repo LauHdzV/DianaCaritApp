@@ -146,7 +146,7 @@ class AdminProjectsViewController: UIViewController, UICollectionViewDelegate, U
                     let userEncontrado = try decoder2.decode(Mensaje.self, from: data!)
                     DispatchQueue.main.async{
                         print(userEncontrado.mensaje)
-                        let alerta = UIAlertController(title: userEncontrado.mensaje, message: "Bien ahi", preferredStyle: .alert)
+                        let alerta = UIAlertController(title: userEncontrado.mensaje, message: "", preferredStyle: .alert)
                         let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         alerta.addAction(botonCancel)
                         self.present(alerta, animated: true)
@@ -249,7 +249,7 @@ class AdminProjectsViewController: UIViewController, UICollectionViewDelegate, U
                     let userEncontrado = try decoder2.decode(Mensaje.self, from: data!)
                     DispatchQueue.main.async{
                         print(userEncontrado.mensaje)
-                        let alerta = UIAlertController(title: userEncontrado.mensaje, message: "Mal ahi", preferredStyle: .alert)
+                        let alerta = UIAlertController(title: userEncontrado.mensaje, message: "", preferredStyle: .alert)
                         let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         alerta.addAction(botonCancel)
                         self.present(alerta, animated: true)

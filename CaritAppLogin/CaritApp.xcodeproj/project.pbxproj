@@ -63,7 +63,7 @@
 		FB32902028DA167C003755D4 /* JPieChartDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPieChartDataSet.swift; sourceTree = "<group>"; };
 		FB32902228DA16A8003755D4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FB49DC3828E33EF2004C5A05 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
-		FB63055C28C7929E00FBAA1B /* CaritAppLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaritAppLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB63055C28C7929E00FBAA1B /* CaritApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaritApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB63055F28C7929E00FBAA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB63056128C7929E00FBAA1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB63056328C7929E00FBAA1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		FB63055D28C7929E00FBAA1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB63055C28C7929E00FBAA1B /* CaritAppLogin.app */,
+				FB63055C28C7929E00FBAA1B /* CaritApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB63055B28C7929E00FBAA1B /* CaritAppLogin */ = {
+		FB63055B28C7929E00FBAA1B /* CaritApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB63057028C792A200FBAA1B /* Build configuration list for PBXNativeTarget "CaritAppLogin" */;
+			buildConfigurationList = FB63057028C792A200FBAA1B /* Build configuration list for PBXNativeTarget "CaritApp" */;
 			buildPhases = (
 				FB63055828C7929E00FBAA1B /* Sources */,
 				FB63055928C7929E00FBAA1B /* Frameworks */,
@@ -170,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = CaritAppLogin;
+			name = CaritApp;
 			productName = CaritAppLogin;
-			productReference = FB63055C28C7929E00FBAA1B /* CaritAppLogin.app */;
+			productReference = FB63055C28C7929E00FBAA1B /* CaritApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB63055728C7929E00FBAA1B /* Build configuration list for PBXProject "CaritAppLogin" */;
+			buildConfigurationList = FB63055728C7929E00FBAA1B /* Build configuration list for PBXProject "CaritApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -204,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB63055B28C7929E00FBAA1B /* CaritAppLogin */,
+				FB63055B28C7929E00FBAA1B /* CaritApp */,
 			);
 		};
 /* End PBXProject section */
@@ -398,8 +398,9 @@
 		FB63057128C792A200FBAA1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -428,8 +429,9 @@
 		FB63057228C792A200FBAA1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -457,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB63055728C7929E00FBAA1B /* Build configuration list for PBXProject "CaritAppLogin" */ = {
+		FB63055728C7929E00FBAA1B /* Build configuration list for PBXProject "CaritApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB63056E28C792A200FBAA1B /* Debug */,
@@ -466,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB63057028C792A200FBAA1B /* Build configuration list for PBXNativeTarget "CaritAppLogin" */ = {
+		FB63057028C792A200FBAA1B /* Build configuration list for PBXNativeTarget "CaritApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB63057128C792A200FBAA1B /* Debug */,

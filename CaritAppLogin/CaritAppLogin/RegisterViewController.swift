@@ -61,14 +61,14 @@ class RegisterViewController: UIViewController {
                     DispatchQueue.main.async{
                         if userEncontrado.creado == true {
                                     /* REGRESA A SIGN IN  */
-                            let alerta = UIAlertController(title: "SI SE CREO USUARIO", message: "Excelente", preferredStyle: .alert)
+                            let alerta = UIAlertController(title: "Usuario creado exitosamente", message: "Ahora puedes iniciar sesión como voluntario", preferredStyle: .alert)
                             let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                             alerta.addAction(botonCancel)
                             self.present(alerta, animated: true)
                             }else{
 
                                     // Pop Up Alerta
-                                let alerta = UIAlertController(title: "NO SE CREO USUARIO", message: userEncontrado.mensaje, preferredStyle: .alert)
+                                let alerta = UIAlertController(title: "No se creó el usuario", message: userEncontrado.mensaje, preferredStyle: .alert)
                                     let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                                     alerta.addAction(botonCancel)
                                     self.present(alerta, animated: true)
