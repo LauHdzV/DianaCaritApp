@@ -10,6 +10,7 @@
 		54BBE6B528F5C06E007BCB44 /* AprobarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBE6B428F5C06E007BCB44 /* AprobarViewController.swift */; };
 		F75313D528F536C100B7998A /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75313D428F536C100B7998A /* FirstScreenViewController.swift */; };
 		F77DA34328DCF6F3009766CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DA34228DCF6F3009766CD /* DetailViewController.swift */; };
+		F7952FC128FE4912004896A9 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952FC028FE4912004896A9 /* LogViewController.swift */; };
 		F796EE2A28C99C8B0034CE58 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */; };
 		F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */; };
 		F796EE2E28C99D0A0034CE58 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2D28C99D0A0034CE58 /* FavoritesViewController.swift */; };
@@ -45,6 +46,7 @@
 		54BBE6B428F5C06E007BCB44 /* AprobarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprobarViewController.swift; sourceTree = "<group>"; };
 		F75313D428F536C100B7998A /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		F77DA34228DCF6F3009766CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F7952FC028FE4912004896A9 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		F796EE2D28C99D0A0034CE58 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				F7C4783328F97D7600807C2D /* ValidarVoluntarioViewController.swift */,
 				FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */,
 				FB63056528C7929E00FBAA1B /* Main.storyboard */,
+				F7952FC028FE4912004896A9 /* LogViewController.swift */,
 				F7C4783128F9324F00807C2D /* AdminLoginViewController.swift */,
 				54BBE6B428F5C06E007BCB44 /* AprobarViewController.swift */,
 				54BBE6B128F5C044007BCB44 /* Aprobar.h */,
@@ -229,6 +232,7 @@
 				F7E9E8D228EFE867002B6391 /* RegistrarViewController.swift in Sources */,
 				F796EE2A28C99C8B0034CE58 /* MyProjectsViewController.swift in Sources */,
 				FB32901F28DA1649003755D4 /* JPieChart.swift in Sources */,
+				F7952FC128FE4912004896A9 /* LogViewController.swift in Sources */,
 				F796EE2E28C99D0A0034CE58 /* FavoritesViewController.swift in Sources */,
 				FB63056428C7929E00FBAA1B /* ViewController.swift in Sources */,
 				F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */,

@@ -17,22 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunch" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-Sj-ejb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram story arreglo servicio celular roto pantalla  simple moderno blanco naranja negro-4" translatesAutoresizingMaskIntoConstraints="NO" id="b1j-Kn-8Ce">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sombrero-Hat-No-Background-Clip-Art" translatesAutoresizingMaskIntoConstraints="NO" id="cnx-ev-UBR">
-                                <rect key="frame" x="75" y="358" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eLk-Sj-ejb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7bw-Xs-JcT"/>
-                            <constraint firstItem="eLk-Sj-ejb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="10" id="Dra-Ux-RXn"/>
-                            <constraint firstItem="eLk-Sj-ejb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="HDS-f7-mWO"/>
-                            <constraint firstAttribute="bottom" secondItem="eLk-Sj-ejb" secondAttribute="bottom" id="RUa-Ax-4Y1"/>
-                            <constraint firstItem="eLk-Sj-ejb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lw6-Zl-jad"/>
+                            <constraint firstItem="b1j-Kn-8Ce" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Gx-hZ-TKm"/>
+                            <constraint firstItem="b1j-Kn-8Ce" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Eny-TB-NPT"/>
+                            <constraint firstItem="b1j-Kn-8Ce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dw2-XY-5cH"/>
+                            <constraint firstAttribute="bottom" secondItem="b1j-Kn-8Ce" secondAttribute="bottom" id="kNj-BK-eB2"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,8 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Sombrero-Hat-No-Background-Clip-Art" width="2182" height="1555"/>
-        <image name="lunch" width="1080" height="1920"/>
+        <image name="instagram story arreglo servicio celular roto pantalla  simple moderno blanco naranja negro-4" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
