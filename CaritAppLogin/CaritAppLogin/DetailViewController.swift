@@ -101,11 +101,11 @@ class DetailViewController: UIViewController {
         if self.idFavorito == 1{
             body = ["proyecto_id":self.idProyecto, "voluntario_id":self.idVoluntario,"favorito":0]
             self.defaults.setValue(0, forKey: "idFavorito")
-            cambiarFav.setTitle("Agregar Favorito", for: .normal)
+            cambiarFav.setTitle("Agregar a Favoritos", for: .normal)
         } else {
             body = ["proyecto_id":self.idProyecto, "voluntario_id":self.idVoluntario,"favorito":1]
             self.defaults.setValue(1, forKey: "idFavorito")
-            cambiarFav.setTitle("Quitar favoritos", for: .normal)
+            cambiarFav.setTitle("Quitar de Favoritos", for: .normal)
         }
         
         let finalBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
