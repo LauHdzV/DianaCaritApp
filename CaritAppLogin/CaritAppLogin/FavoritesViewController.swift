@@ -218,6 +218,7 @@ class Post2: UICollectionViewCell {
     
     @IBOutlet weak var background: UIView!
     
+   
     @IBOutlet weak var image: UIImageView!
     
     
